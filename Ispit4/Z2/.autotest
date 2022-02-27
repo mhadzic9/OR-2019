@@ -1,0 +1,144 @@
+{
+    "id": 5775,
+    "name": "Osnove ra\u010dunarstva (2019\/2020), Ispit 4, Zadatak 2",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \"Danas je bio lijep i suncan dan\";\nint niz[] = {4, 2, 5, 8};\nprintf(\"'%s'\", ispremjestaj(tekst, niz, 4));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'i Danas lijep je bio suncan dan'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \"Danas je bio lijep i suncan dan\";\nint niz[] = {4, 2, 5, 7};\nprintf(\"'%s'\", ispremjestaj(tekst, niz, 4));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'dan i Danas lijep je bio suncan'",
+                "'dani Danas lijep je bio suncan '"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \"Califragilisticexpialidocious\";\nint niz[] = {1,1,1,1,1,1,1,1,1,1};\nprintf(\"'%s'\\n\", ispremjestaj(tekst, niz, 10));\n\nchar tekst2[] = \"Califragilisticexpialidocious i j\";\nint niz2[] = {2};\nprintf(\"'%s'\", ispremjestaj(tekst2, niz2, 1));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Califragilisticexpialidocious'\\n'i Califragilisticexpialidocious j'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \"  Ovo   je     neki  primjer teksta    sa puno     razmaka     \";\nint niz[] = {3,1,10,7};\nprintf(\"'%s'\", ispremjestaj(tekst, niz, 4));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'puno     neki    Ovo   je     primjer teksta    sa razmaka     '"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "true",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \"Uvod u programiranje je novo ime za Osnove racunarstva\";\nint niz[] = {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2};\nprintf(\"'%s'\\n\", ispremjestaj(tekst, niz, 20));\nprintf(\"'%s'\", ispremjestaj(tekst, niz, 21));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Uvod u programiranje je novo ime za Osnove racunarstva'\\n'u Uvod programiranje je novo ime za Osnove racunarstva'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \"Onaj ko zna programirati sigurno polaze ispit \";\nint niz[] = {4, 4, 5, 7, 7, 7, 7};\nprintf(\"'%s'\", ispremjestaj(tekst, niz, 7));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Onaj ko polaze ispit sigurno zna programirati '"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

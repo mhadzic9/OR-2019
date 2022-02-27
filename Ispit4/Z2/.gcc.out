@@ -1,0 +1,10 @@
+/rhome/m/mhadzic9/workspace/OR/Ispit4/Z2/main.c: In function ‘main’:
+/rhome/m/mhadzic9/workspace/OR/Ispit4/Z2/main.c:6:6: warning: unused variable ‘niz’ [-Wunused-variable]
+  int niz[] = {4, 2, 5, 8};
+      ^~~
+/rhome/m/mhadzic9/workspace/OR/Ispit4/Z2/main.c:5:7: warning: unused variable ‘tekst’ [-Wunused-variable]
+  char tekst[] = "Danas je bio lijep i suncan dan";
+       ^~~~~
+/rhome/m/mhadzic9/workspace/OR/Ispit4/Z2/main.c:4:7: warning: unused variable ‘tekst1’ [-Wunused-variable]
+  char tekst1[40] = {"Danas je bio lijep i suncan dan"};
+       ^~~~~~

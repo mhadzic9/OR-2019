@@ -1,0 +1,134 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘main’:\nmain.c:24:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n             if (nizA[k]==nizA[i] && i!=k) {\n                        ^~\nmain.c:37:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n             if (nizB[l]==nizB[i] && i!=l) {\n                        ^~\nmain.c:49:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n             if (nizA[i]==nizB[j]) {\n                        ^~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "24",
+                "col": "24",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_7195/main.c:24:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]             if (nizA[k]==nizA[i] && i!=k) {                        ^~",
+                "code": "if (nizA[k]==nizA[i] && i!=k) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "37",
+                "col": "24",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_7195/main.c:37:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]             if (nizB[l]==nizB[i] && i!=l) {                        ^~",
+                "code": "if (nizB[l]==nizB[i] && i!=l) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "49",
+                "col": "24",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_7195/main.c:49:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]             if (nizA[i]==nizB[j]) {                        ^~",
+                "code": "if (nizA[i]==nizB[j]) {"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1370": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente 1.niza (-1 kraj): \nUnesite elemente 2.niza (-1 kraj): \nPresjek unesenih nizova je: 3, 4, 7",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1371": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente 1.niza (-1 kraj): \nUnesite elemente 2.niza (-1 kraj): \nPresjek unesenih nizova je prazan skup!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1372": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente 1.niza (-1 kraj): \nUnesite elemente 2.niza (-1 kraj): \nPresjek unesenih nizova je: 1.1",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1373": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente 1.niza (-1 kraj): \nUnesite elemente 2.niza (-1 kraj): \nPresjek unesenih nizova je: 1.1, 1",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1374": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente 1.niza (-1 kraj): \nUnesite elemente 2.niza (-1 kraj): \nPresjek unesenih nizova je: 1.001",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1375": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente 1.niza (-1 kraj): \nUnesite elemente 2.niza (-1 kraj): \nPresjek unesenih nizova je: -3, -7, -4, -2",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1599821597
+}

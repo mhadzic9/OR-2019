@@ -1,0 +1,171 @@
+{
+    "id": 7218,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR 12, zadatak 11",
+    "languages": [
+        "C"
+    ],
+    "tools": {
+        "compile": {
+            "require": "gcc",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic"
+            ]
+        },
+        "compile[debug]": {
+            "require": "gcc",
+            "features": [
+                "debug"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "compile": [],
+            "options": [
+                "silent",
+                "terminate"
+            ]
+        },
+        {
+            "id": 2158,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/* AT1: Primjer iz zadatka *\/\nstruct Pravougaonik niz[3] ={{{1, 1}, 5, 3}, {{3, 3}, 7, 6}, \n{{ 5, 7}, 5, 3}};\nint broj_uspjesnih = crtaj_pravougaonike(niz, 3);\nprintf(\"Broj uspjesnih je: %d\", broj_uspjesnih);\n",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    " *****\n *   *\n *********\n   *     *\n   *   *****\n   *   * * *\n   *   *****\n   *******\nBroj uspjesnih je: 3\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 2159,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/* AT2: Preklapanje pravougaonika *\/\nstruct Pravougaonik niz[3] ={{{0, 0}, 5, 5}, {{0, 0}, 5, 5},\n{{0, 0}, 5, 5}};\nint broj_uspjesnih = crtaj_pravougaonike(niz, 3);\nprintf(\"Broj uspjesnih je: %d\", broj_uspjesnih);",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "*****\n*   *\n*   *\n*   *\n*****\nBroj uspjesnih je: 3"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 2160,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/* AT3: Ugnijezdeni pravougaonici *\/\nstruct Pravougaonik niz[3] ={{{1, 1}, 7, 7}, {{3, 3}, 3, 3}};\nint broj_uspjesnih = crtaj_pravougaonike(niz, 2);\nprintf(\"Broj uspjesnih je: %d\", broj_uspjesnih);",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    " *******\n *     *\n * *** *\n * * * *\n * *** *\n *     *\n *******\nBroj uspjesnih je: 2"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 2161,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/* AT4: Pravougaonici dijelom van ekrana *\/\nstruct Pravougaonik niz[3] ={{{0, 0}, 5, 5}, {{15, -2}, 5, 5},\n{{99, 101}, 5, 5}};\nint broj_uspjesnih = crtaj_pravougaonike(niz, 3);\nprintf(\"Broj uspjesnih je: %d\", broj_uspjesnih);",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "*****\n*   *\n*   *\n*   *\n*****\n***                                                                                                  \n  *                                                                                                  \n  *                                                                                                  \n  *                                                                                                  \n***                                                                                                  \n*      \nBroj uspjesnih je: 1"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 3104,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/* AT5: Pravougaonici kompletno van ekrana *\/\nstruct Pravougaonik niz[4] ={{{0, 0}, 5, 5}, {{15, -8}, 5, 5},\n{{-8, 15}, 5, 5}, {{101, 101}, 5, 5}};\nint broj_uspjesnih = crtaj_pravougaonike(niz, 4);\nprintf(\"Broj uspjesnih je: %d\", broj_uspjesnih);",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "*****\n*   *\n*   *\n*   *\n*****\nBroj uspjesnih je: 1"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 3105,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/* AT6: Nema nista na ekranu *\/\nstruct Pravougaonik niz[3] ={{{15, -8}, 5, 5},\n{{-8, 15}, 5, 5}, {{101, 101}, 5, 5}};\nint broj_uspjesnih = crtaj_pravougaonike(niz, 3);\nprintf(\"Broj uspjesnih je: %d\", broj_uspjesnih);",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Broj uspjesnih je: 0"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        }
+    ]
+}

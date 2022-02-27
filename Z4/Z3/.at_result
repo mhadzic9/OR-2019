@@ -1,0 +1,31 @@
+{
+    "buildhost_description": {
+        "id": "lab002-c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n"
+    },
+    "tools": {
+        "compile": "gcc (GCC) 4.4.7 20120313 (Red Hat 4.4.7-23)",
+        "compile[debug]": "gcc (GCC) 4.4.7 20120313 (Red Hat 4.4.7-23)",
+        "debug": "GNU gdb (GDB) Red Hat Enterprise Linux (7.2-92.el6)",
+        "profile[memcheck]": "valgrind-3.8.1",
+        "profile[sgcheck]": "valgrind-3.8.1"
+    },
+    "status": 4,
+    "test_results": {
+        "1": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "compile": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.c: In function ‘U_Mala’:\nmain.c:15: error: implicit declaration of function ‘tolower’\nmain.c: In function ‘max_slog’:\nmain.c:59: warning: ISO C90 forbids mixed declarations and code\nAt top level:\ncc1: warning: unrecognized command line option \"-Wno-unused-result\"",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": []
+                }
+            }
+        }
+    },
+    "time": 1578406553
+}

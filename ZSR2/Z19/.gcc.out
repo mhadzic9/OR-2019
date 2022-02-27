@@ -1,0 +1,4 @@
+/rhome/m/mhadzic9/workspace/OR/ZSR2/Z19/main.c: In function ‘main’:
+/rhome/m/mhadzic9/workspace/OR/ZSR2/Z19/main.c:5:28: warning: variable ‘razlika’ set but not used [-Wunused-but-set-variable]
+  double cijena,nova_cijena,razlika;
+                            ^~~~~~~

@@ -1,0 +1,4 @@
+/rhome/m/mhadzic9/workspace/OR/ZSR6/Z10/main.c: In function ‘main’:
+/rhome/m/mhadzic9/workspace/OR/ZSR6/Z10/main.c:47:38: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    if (fabs(broj_manjih1-broj_vecih1)==1) suma+=bodovi[i];
+                                      ^~

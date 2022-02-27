@@ -1,0 +1,10 @@
+/rhome/m/mhadzic9/workspace/OR/ZSR6/Z23/main.c: In function ‘main’:
+/rhome/m/mhadzic9/workspace/OR/ZSR6/Z23/main.c:48:12: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+   if (kurac!=mat[i][j]) cirkularna=0;
+            ^~
+/rhome/m/mhadzic9/workspace/OR/ZSR6/Z23/main.c:7:18: warning: unused variable ‘oboje’ [-Wunused-variable]
+  int i,j,m,n,M,N,oboje=1,teplicova=1,cirkularna=1;
+                  ^~~~~
+/rhome/m/mhadzic9/workspace/OR/ZSR6/Z23/main.c:6:29: warning: ‘mat[0][0]’ is used uninitialized in this function [-Wuninitialized]
+  double mat[VISINA][SIRINA],clan=mat[0][0];;
+                             ^~~~

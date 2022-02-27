@@ -1,0 +1,4 @@
+/rhome/m/mhadzic9/workspace/OR/ZSR4/Z5/main.c: In function ‘main’:
+/rhome/m/mhadzic9/workspace/OR/ZSR4/Z5/main.c:10:6: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+  if (!tacno) {
+      ^

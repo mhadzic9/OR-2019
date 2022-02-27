@@ -1,0 +1,124 @@
+{
+    "id": 5777,
+    "name": "Osnove ra\u010dunarstva (2019\/2020), Ispit 4, Zadatak 4",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT1: Osnovni slucaj *\/\ngen = fopen(\"ocjene.dat\", \"wb\");\nchar ind[20] = \"99999\";\nfwrite(ind, 20, 1, gen);\np(5), p(8), p(7), p(9), p(8), p(7);\nstrcpy(ind, \"12345\");\nfwrite(ind, 20, 1, gen);\np(3), p(8), p(8), p(7);\nstrcpy(ind, \"123-ST\");\nfwrite(ind, 20, 1, gen);\np(2), p(8), p(8);\nstrcpy(ind, \"43215\");\nfwrite(ind, 20, 1, gen);\np(3), p(9), p(8), p(6);\nfclose(gen);\n\ngen = fopen(\"studenti.txt\", \"w\");\nfputs(\"Pero_Peric_12345_Mujo_Suljic_43215_Sara_Sarac_123-ST_Fata_Fatic_99999_\", gen);\nfclose(gen);\n\n_main();",
+            "global_above_main": "#include <string.h>\nFILE* gen;\nvoid p(int x) { fwrite(&x, 1, 4, gen); }",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Sara Sarac (123-ST) - 8.00"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT2: Dva studenta imaju isti prosjek *\/\ngen = fopen(\"ocjene.dat\", \"wb\");\nchar ind[20] = \"99999\";\nfwrite(ind, 20, 1, gen);\np(5), p(8), p(7), p(9), p(8), p(8);\nstrcpy(ind, \"12345\");\nfwrite(ind, 20, 1, gen);\np(3), p(8), p(8), p(7);\nstrcpy(ind, \"123-ST\");\nfwrite(ind, 20, 1, gen);\np(2), p(8), p(8);\nstrcpy(ind, \"43215\");\nfwrite(ind, 20, 1, gen);\np(3), p(9), p(8), p(6);\nfclose(gen);\n\ngen = fopen(\"studenti.txt\", \"w\");\nfputs(\"Pero_Peric_12345_Mujo_Suljic_43215_Sara_Sarac_123-ST_Fata_Fatic_99999_\", gen);\nfclose(gen);\n\n_main();",
+            "global_above_main": "#include <string.h>\nFILE* gen;\nvoid p(int x) { fwrite(&x, 1, 4, gen); }",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Sara Sarac (123-ST) - 8.00\\nFata Fatic (99999) - 8.00",
+                "Fata Fatic (99999) - 8.00\\nSara Sarac (123-ST) - 8.00"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT3: Razmaci u imenu i prezimenu *\/\ngen = fopen(\"ocjene.dat\", \"wb\");\nchar ind[20] = \"12345\";\nfwrite(ind, 20, 1, gen);\np(3), p(8), p(8), p(7);\nstrcpy(ind, \"123-ST\");\nfwrite(ind, 20, 1, gen);\np(2), p(8), p(8);\nfclose(gen);\n\ngen = fopen(\"studenti.txt\", \"w\");\nfputs(\"Ana Marija_Peric Simic_12345_Mujo_Suljic_1_\", gen);\nfclose(gen);\n\n_main();",
+            "global_above_main": "#include <string.h>\nFILE* gen;\nvoid p(int x) { fwrite(&x, 1, 4, gen); }",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Ana Marija Peric Simic (12345) - 7.67"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT4: Nemoj se krahirati sa praznim datotekama (ako je ovo jedini test koji prolazi, nece biti priznat) *\/\nFILE* gen = fopen(\"ocjene.dat\", \"wb\");\nfclose (gen);\ngen = fopen(\"studenti.txt\", \"w\");\nfclose(gen);\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nema podataka."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT5: Svi imaju isti prosjek *\/\ngen = fopen(\"ocjene.dat\", \"wb\");\nchar ind[20] = \"99999\";\nfwrite(ind, 20, 1, gen);\np(5), p(8), p(7), p(9), p(8), p(8);\nstrcpy(ind, \"12345\");\nfwrite(ind, 20, 1, gen);\np(3), p(8), p(8), p(8);\nstrcpy(ind, \"123-ST\");\nfwrite(ind, 20, 1, gen);\np(1), p(8),\nstrcpy(ind, \"43215\");\nfwrite(ind, 20, 1, gen);\np(3), p(10), p(8), p(6);\nfclose(gen);\n\ngen = fopen(\"studenti.txt\", \"w\");\nfputs(\"Pero_Peric_12345_Mujo_Suljic_43215_Sara_Sarac_123-ST_Fata_Fatic_99999_\", gen);\nfclose(gen);\n\n_main();",
+            "global_above_main": "#include <string.h>\nFILE* gen;\nvoid p(int x) { fwrite(&x, 1, 4, gen); }",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Pero Peric (12345) - 8.00\\nMujo Suljic (43215) - 8.00\\nSara Sarac (123-ST) - 8.00\\nFata Fatic (99999) - 8.00",
+                "Fata Fatic (99999) - 8.00\\nPero Peric (12345) - 8.00\\nSara Sarac (123-ST) - 8.00\\nMujo Suljic (43215) - 8.00"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

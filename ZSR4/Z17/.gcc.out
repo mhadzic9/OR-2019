@@ -1,0 +1,9 @@
+/rhome/m/mhadzic9/workspace/OR/ZSR4/Z17/main.c: In function ‘main’:
+/rhome/m/mhadzic9/workspace/OR/ZSR4/Z17/main.c:6:2: error: ISO C90 forbids variable length array ‘mat’ [-Werror=vla]
+  int mat[n][n];
+  ^~~
+/rhome/m/mhadzic9/workspace/OR/ZSR4/Z17/main.c:6:2: error: ISO C90 forbids variable length array ‘mat’ [-Werror=vla]
+/rhome/m/mhadzic9/workspace/OR/ZSR4/Z17/main.c:6:6: warning: unused variable ‘mat’ [-Wunused-variable]
+  int mat[n][n];
+      ^~~
+cc1: some warnings being treated as errors

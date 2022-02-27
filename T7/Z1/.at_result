@@ -1,0 +1,126 @@
+{
+    "buildhost_description": {
+        "id": "lab002c28",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "715": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_715.c: In function ‘main’:\nbs_test_715.c:13:2: warning: implicit declaration of function ‘crtaj’ [-Wimplicit-function-declaration]\n  crtaj (7);\n  ^~~~~\n/tmp/ccQ181UW.o: In function `main':\nbs_test_715.c:(.text+0x38): undefined reference to `crtaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "2",
+                        "message": "implicit declaration of function 'crtaj'",
+                        "output": "/tmp/buildservice/bs_8018/bs_test_715.c:13:2: warning: implicit declaration of function ‘crtaj’ [-Wimplicit-function-declaration]  crtaj (7);  ^~~~~/tmp/ccQ181UW.o: In function `main':bs_test_715.c:(.text+0x38): undefined reference to `crtaj'collect2: error: ld returned 1 exit status",
+                        "code": "crtaj (7);"
+                    }
+                ]
+            }
+        },
+        "716": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_716.c: In function ‘main’:\nbs_test_716.c:14:1: warning: implicit declaration of function ‘crtaj’ [-Wimplicit-function-declaration]\n crtaj (0);\n ^~~~~\n/tmp/cc6Xrj94.o: In function `main':\nbs_test_716.c:(.text+0x42): undefined reference to `crtaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "1",
+                        "message": "implicit declaration of function 'crtaj'",
+                        "output": "/tmp/buildservice/bs_8018/bs_test_716.c:14:1: warning: implicit declaration of function ‘crtaj’ [-Wimplicit-function-declaration] crtaj (0); ^~~~~/tmp/cc6Xrj94.o: In function `main':bs_test_716.c:(.text+0x42): undefined reference to `crtaj'collect2: error: ld returned 1 exit status",
+                        "code": "crtaj (0);"
+                    }
+                ]
+            }
+        },
+        "717": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_717.c: In function ‘main’:\nbs_test_717.c:15:2: warning: implicit declaration of function ‘crtaj’ [-Wimplicit-function-declaration]\n  crtaj (niz[i]), printf (\"\\n\");\n  ^~~~~\n/tmp/ccURXvX9.o: In function `main':\nbs_test_717.c:(.text+0x7c): undefined reference to `crtaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "2",
+                        "message": "implicit declaration of function 'crtaj'",
+                        "output": "/tmp/buildservice/bs_8018/bs_test_717.c:15:2: warning: implicit declaration of function ‘crtaj’ [-Wimplicit-function-declaration]  crtaj (niz[i]), printf (\"\\n\");  ^~~~~/tmp/ccURXvX9.o: In function `main':bs_test_717.c:(.text+0x7c): undefined reference to `crtaj'collect2: error: ld returned 1 exit status",
+                        "code": "crtaj (niz[i]), printf (\"\\n\");"
+                    }
+                ]
+            }
+        },
+        "718": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_718.c: In function ‘main’:\nbs_test_718.c:14:1: warning: implicit declaration of function ‘crtaj’ [-Wimplicit-function-declaration]\n crtaj (1);\n ^~~~~\n/tmp/ccGVvMUf.o: In function `main':\nbs_test_718.c:(.text+0x42): undefined reference to `crtaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "1",
+                        "message": "implicit declaration of function 'crtaj'",
+                        "output": "/tmp/buildservice/bs_8018/bs_test_718.c:14:1: warning: implicit declaration of function ‘crtaj’ [-Wimplicit-function-declaration] crtaj (1); ^~~~~/tmp/ccGVvMUf.o: In function `main':bs_test_718.c:(.text+0x42): undefined reference to `crtaj'collect2: error: ld returned 1 exit status",
+                        "code": "crtaj (1);"
+                    }
+                ]
+            }
+        },
+        "719": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_719.c: In function ‘main’:\nbs_test_719.c:14:1: warning: implicit declaration of function ‘crtaj’ [-Wimplicit-function-declaration]\n crtaj (-1);\n ^~~~~\n/tmp/ccFVxbPk.o: In function `main':\nbs_test_719.c:(.text+0x42): undefined reference to `crtaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "1",
+                        "message": "implicit declaration of function 'crtaj'",
+                        "output": "/tmp/buildservice/bs_8018/bs_test_719.c:14:1: warning: implicit declaration of function ‘crtaj’ [-Wimplicit-function-declaration] crtaj (-1); ^~~~~/tmp/ccFVxbPk.o: In function `main':bs_test_719.c:(.text+0x42): undefined reference to `crtaj'collect2: error: ld returned 1 exit status",
+                        "code": "crtaj (-1);"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1578756435
+}

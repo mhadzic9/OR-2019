@@ -1,0 +1,176 @@
+{
+    "id": 393603,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Ispit 8, Zadatak 3",
+    "languages": [
+        "C"
+    ],
+    "tools": {
+        "compile": {
+            "require": "gcc",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic"
+            ]
+        },
+        "compile[debug]": {
+            "require": "gcc",
+            "features": [
+                "debug"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "compile": [],
+            "options": [
+                "silent",
+                "terminate"
+            ]
+        },
+        {
+            "id": 1,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/* AT1: Jednostavan primjer sa dvije tacke*\/\nstruct Tacka niz[] = { {0,0}, {0,2} };\nstruct Kruznica test = obuhvat(niz, 2);\nispis_kruznice(test);\n",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "(0.00,1.00) 1.00"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 2,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/* AT2: Nesto slozeniji primjer sa dvije tacke *\/\n\/* Poluprecnik je sqrt(2)\/2 *\/\nstruct Tacka niz[] = { {1,1}, {2,2} };\nstruct Kruznica test = obuhvat(niz, 2);\nispis_kruznice(test);",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "(1.50,1.50) 0.71"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 3,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/* AT3: Samo jedna tacka *\/\nstruct Tacka niz[] = { {42, 42} };\nstruct Kruznica test = obuhvat(niz, 1);\nispis_kruznice(test);",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "(42.00,42.00) 0.00"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 4,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/* AT4: Puno tacaka, da li je uopste u kruznici? *\/\nstruct Tacka niz[100];\nint i;\nfor (i=0; i<100; i++) {\n\tniz[i].x = ((i+1)*7)%10;\n\tniz[i].y = ((i+1)*6)%10;\n}\nstruct Kruznica test = obuhvat(niz, 100);\nfor (i=0; i<100; i++)\n\tif (udaljenost_at4(niz[i], test.centar) > test.poluprecnik)\n\t\tprintf(\"NOT \");\nprintf(\"OK\");",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "#include <math.h>\ndouble udaljenost_at4(struct Tacka t1, struct Tacka t2) {\n\treturn sqrt( (t1.x-t2.x)*(t1.x-t2.x) + (t1.y-t2.y)*(t1.y-t2.y) );\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "OK"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 5,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/* AT5: Puno tacaka, ocekivani rezultat *\/\nstruct Tacka niz[100];\nint i;\nfor (i=0; i<100; i++) {\n\tniz[i].x = ((i+1)*7)%10;\n\tniz[i].y = ((i+1)*6)%10;\n}\nstruct Kruznica test = obuhvat(niz, 100);\nispis_kruznice(test);",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "(4.50,4.00) 6.02"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 6,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/* AT6: Male vrijednosti koordinata *\/\nstruct Tacka niz[100];\nint i;\nfor (i=0; i<100; i++) {\n\tniz[i].x = (double)(((i+1)*11)%10) \/ 100;\n\tniz[i].y = (double)(((i+1)*17)%10) \/ 100;\n}\nstruct Kruznica k = obuhvat(niz, 100);\nprintf(\"(%.4f,%.4f) %.4f\", k.centar.x, k.centar.y, k.poluprecnik);",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "(0.0450,0.0450) 0.0636"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        }
+    ]
+}

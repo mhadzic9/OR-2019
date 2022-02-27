@@ -1,0 +1,4 @@
+/rhome/m/mhadzic9/workspace/OR/ZSR4/Z15/main.c: In function ‘main’:
+/rhome/m/mhadzic9/workspace/OR/ZSR4/Z15/main.c:14:6: warning: unused variable ‘istina’ [-Wunused-variable]
+  int istina=funkcija(c);
+      ^~~~~~

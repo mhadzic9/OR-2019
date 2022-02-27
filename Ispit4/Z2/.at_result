@@ -1,0 +1,147 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_1.c: In function ‘main’:\nbs_test_1.c:15:16: warning: implicit declaration of function ‘ispremjestaj’ [-Wimplicit-function-declaration]\n printf(\"'%s'\", ispremjestaj(tekst, niz, 4));\n                ^~~~~~~~~~~~\n/tmp/ccRCfUXG.o: In function `main':\nbs_test_1.c:(.text+0x9e): undefined reference to `ispremjestaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "16",
+                        "message": "implicit declaration of function 'ispremjestaj'",
+                        "output": "/tmp/buildservice/bs_2925/bs_test_1.c:15:16: warning: implicit declaration of function ‘ispremjestaj’ [-Wimplicit-function-declaration] printf(\"'%s'\", ispremjestaj(tekst, niz, 4));                ^~~~~~~~~~~~/tmp/ccRCfUXG.o: In function `main':bs_test_1.c:(.text+0x9e): undefined reference to `ispremjestaj'collect2: error: ld returned 1 exit status",
+                        "code": "printf(\"'%s'\", ispremjestaj(tekst, niz, 4));"
+                    }
+                ]
+            }
+        },
+        "2": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_2.c: In function ‘main’:\nbs_test_2.c:15:16: warning: implicit declaration of function ‘ispremjestaj’ [-Wimplicit-function-declaration]\n printf(\"'%s'\", ispremjestaj(tekst, niz, 4));\n                ^~~~~~~~~~~~\n/tmp/cctz7CrP.o: In function `main':\nbs_test_2.c:(.text+0x9e): undefined reference to `ispremjestaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "16",
+                        "message": "implicit declaration of function 'ispremjestaj'",
+                        "output": "/tmp/buildservice/bs_2925/bs_test_2.c:15:16: warning: implicit declaration of function ‘ispremjestaj’ [-Wimplicit-function-declaration] printf(\"'%s'\", ispremjestaj(tekst, niz, 4));                ^~~~~~~~~~~~/tmp/cctz7CrP.o: In function `main':bs_test_2.c:(.text+0x9e): undefined reference to `ispremjestaj'collect2: error: ld returned 1 exit status",
+                        "code": "printf(\"'%s'\", ispremjestaj(tekst, niz, 4));"
+                    }
+                ]
+            }
+        },
+        "3": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3.c: In function ‘main’:\nbs_test_3.c:15:18: warning: implicit declaration of function ‘ispremjestaj’ [-Wimplicit-function-declaration]\n printf(\"'%s'\\n\", ispremjestaj(tekst, niz, 10));\n                  ^~~~~~~~~~~~\n/tmp/cc50GcsU.o: In function `main':\nbs_test_3.c:(.text+0xca): undefined reference to `ispremjestaj'\nbs_test_3.c:(.text+0x143): undefined reference to `ispremjestaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "18",
+                        "message": "implicit declaration of function 'ispremjestaj'",
+                        "output": "/tmp/buildservice/bs_2925/bs_test_3.c:15:18: warning: implicit declaration of function ‘ispremjestaj’ [-Wimplicit-function-declaration] printf(\"'%s'\\n\", ispremjestaj(tekst, niz, 10));                  ^~~~~~~~~~~~/tmp/cc50GcsU.o: In function `main':bs_test_3.c:(.text+0xca): undefined reference to `ispremjestaj'bs_test_3.c:(.text+0x143): undefined reference to `ispremjestaj'collect2: error: ld returned 1 exit status",
+                        "code": "printf(\"'%s'\\n\", ispremjestaj(tekst, niz, 10));"
+                    }
+                ]
+            }
+        },
+        "4": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_4.c: In function ‘main’:\nbs_test_4.c:15:16: warning: implicit declaration of function ‘ispremjestaj’ [-Wimplicit-function-declaration]\n printf(\"'%s'\", ispremjestaj(tekst, niz, 4));\n                ^~~~~~~~~~~~\n/tmp/ccQFhAuZ.o: In function `main':\nbs_test_4.c:(.text+0xd6): undefined reference to `ispremjestaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "16",
+                        "message": "implicit declaration of function 'ispremjestaj'",
+                        "output": "/tmp/buildservice/bs_2925/bs_test_4.c:15:16: warning: implicit declaration of function ‘ispremjestaj’ [-Wimplicit-function-declaration] printf(\"'%s'\", ispremjestaj(tekst, niz, 4));                ^~~~~~~~~~~~/tmp/ccQFhAuZ.o: In function `main':bs_test_4.c:(.text+0xd6): undefined reference to `ispremjestaj'collect2: error: ld returned 1 exit status",
+                        "code": "printf(\"'%s'\", ispremjestaj(tekst, niz, 4));"
+                    }
+                ]
+            }
+        },
+        "5": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_5.c: In function ‘main’:\nbs_test_5.c:15:18: warning: implicit declaration of function ‘ispremjestaj’ [-Wimplicit-function-declaration]\n printf(\"'%s'\\n\", ispremjestaj(tekst, niz, 20));\n                  ^~~~~~~~~~~~\n/tmp/ccWY4un5.o: In function `main':\nbs_test_5.c:(.text+0x160): undefined reference to `ispremjestaj'\nbs_test_5.c:(.text+0x191): undefined reference to `ispremjestaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "18",
+                        "message": "implicit declaration of function 'ispremjestaj'",
+                        "output": "/tmp/buildservice/bs_2925/bs_test_5.c:15:18: warning: implicit declaration of function ‘ispremjestaj’ [-Wimplicit-function-declaration] printf(\"'%s'\\n\", ispremjestaj(tekst, niz, 20));                  ^~~~~~~~~~~~/tmp/ccWY4un5.o: In function `main':bs_test_5.c:(.text+0x160): undefined reference to `ispremjestaj'bs_test_5.c:(.text+0x191): undefined reference to `ispremjestaj'collect2: error: ld returned 1 exit status",
+                        "code": "printf(\"'%s'\\n\", ispremjestaj(tekst, niz, 20));"
+                    }
+                ]
+            }
+        },
+        "6": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_6.c: In function ‘main’:\nbs_test_6.c:15:16: warning: implicit declaration of function ‘ispremjestaj’ [-Wimplicit-function-declaration]\n printf(\"'%s'\", ispremjestaj(tekst, niz, 7));\n                ^~~~~~~~~~~~\n/tmp/ccDHYyqY.o: In function `main':\nbs_test_6.c:(.text+0xd2): undefined reference to `ispremjestaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "16",
+                        "message": "implicit declaration of function 'ispremjestaj'",
+                        "output": "/tmp/buildservice/bs_2925/bs_test_6.c:15:16: warning: implicit declaration of function ‘ispremjestaj’ [-Wimplicit-function-declaration] printf(\"'%s'\", ispremjestaj(tekst, niz, 7));                ^~~~~~~~~~~~/tmp/ccDHYyqY.o: In function `main':bs_test_6.c:(.text+0xd2): undefined reference to `ispremjestaj'collect2: error: ld returned 1 exit status",
+                        "code": "printf(\"'%s'\", ispremjestaj(tekst, niz, 7));"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1600257139
+}

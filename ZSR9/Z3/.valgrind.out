@@ -1,0 +1,19 @@
+==26802== Memcheck, a memory error detector
+==26802== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==26802== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==26802== Command: /rhome/m/mhadzic9/workspace/OR/ZSR9/Z3/.runme
+==26802== Parent PID: 26787
+==26802== 
+==26802== 
+==26802== Process terminating with default action of signal 24 (SIGXCPU): dumping core
+==26802==    at 0x1086BC: velika (main.c:6)
+==26802==    by 0x108733: main (main.c:15)
+==26802== 
+==26802== HEAP SUMMARY:
+==26802==     in use at exit: 0 bytes in 0 blocks
+==26802==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==26802== 
+==26802== All heap blocks were freed -- no leaks are possible
+==26802== 
+==26802== For counts of detected and suppressed errors, rerun with: -v
+==26802== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

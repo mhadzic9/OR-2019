@@ -1,0 +1,4 @@
+/rhome/m/mhadzic9/workspace/OR/ZSR13/Z5/main.c: In function ‘main’:
+/rhome/m/mhadzic9/workspace/OR/ZSR13/Z5/main.c:78:15: warning: unused variable ‘prezime’ [-Wunused-variable]
+  char ime[30],prezime[10];
+               ^~~~~~~

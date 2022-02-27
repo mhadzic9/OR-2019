@@ -1,0 +1,83 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘stepen’:\nmain.c:6:16: warning: unused variable ‘suma’ [-Wunused-variable]\n  double clan=1,suma=0,clan1;\n                ^~~~\nmain.c:6:23: warning: ‘clan1’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n  double clan=1,suma=0,clan1;\n                       ^~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "6",
+                "col": "16",
+                "message": "unused variable 'suma'",
+                "output": "/tmp/buildservice/bs_9314/main.c:6:16: warning: unused variable ‘suma’ [-Wunused-variable]  double clan=1,suma=0,clan1;                ^~~~",
+                "code": "double clan=1,suma=0,clan1;"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "6",
+                "col": "23",
+                "message": "'clan1' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_9314/main.c:6:23: warning: ‘clan1’ may be used uninitialized in this function [-Wmaybe-uninitialized]  double clan=1,suma=0,clan1;                       ^~~~~",
+                "code": "double clan=1,suma=0,clan1;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1246": {
+            "status": 1,
+            "run_result": {
+                "output": "32",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1247": {
+            "status": 1,
+            "run_result": {
+                "output": "0.03125",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1248": {
+            "status": 1,
+            "run_result": {
+                "output": "8",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1575812562
+}

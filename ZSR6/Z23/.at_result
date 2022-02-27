@@ -1,0 +1,401 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘main’:\nmain.c:47:11: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n   if (clan!=mat[i][j]) cirkularna=0;\n           ^~\nmain.c:7:18: warning: unused variable ‘oboje’ [-Wunused-variable]\n  int i,j,m,n,M,N,oboje=1,teplicova=1,cirkularna=1;\n                  ^~~~~\nmain.c:6:29: warning: ‘mat[0][0]’ is used uninitialized in this function [-Wuninitialized]\n  double mat[VISINA][SIRINA],clan=mat[0][0];;\n                             ^~~~\nmain.c:47:19: warning: ‘j’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n   if (clan!=mat[i][j]) cirkularna=0;\n             ~~~~~~^~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "47",
+                "col": "11",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2508/main.c:47:11: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]   if (clan!=mat[i][j]) cirkularna=0;           ^~",
+                "code": "if (clan!=mat[i][j]) cirkularna=0;"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "7",
+                "col": "18",
+                "message": "unused variable 'oboje'",
+                "output": "/tmp/buildservice/bs_2508/main.c:7:18: warning: unused variable ‘oboje’ [-Wunused-variable]  int i,j,m,n,M,N,oboje=1,teplicova=1,cirkularna=1;                  ^~~~~",
+                "code": "int i,j,m,n,M,N,oboje=1,teplicova=1,cirkularna=1;"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "6",
+                "col": "29",
+                "message": "'mat[0][0]' is used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_2508/main.c:6:29: warning: ‘mat[0][0]’ is used uninitialized in this function [-Wuninitialized]  double mat[VISINA][SIRINA],clan=mat[0][0];;                             ^~~~",
+                "code": "double mat[VISINA][SIRINA],clan=mat[0][0];;"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "47",
+                "col": "19",
+                "message": "'j' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_2508/main.c:47:19: warning: ‘j’ may be used uninitialized in this function [-Wmaybe-uninitialized]   if (clan!=mat[i][j]) cirkularna=0;             ~~~~~~^~~",
+                "code": "if (clan!=mat[i][j]) cirkularna=0;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "4109": {
+            "status": 7,
+            "run_result": {
+                "output": "Unesite M i N: Pogresan unos!\nUnesite M i N: Pogresan unos!\nUnesite M i N: Unesite elemente matrice: Matrica je cirkularna",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==11853== Memcheck, a memory error detector\n==11853== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==11853== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==11853== Command: bs_test_4109\n==11853== Parent PID: 11852\n==11853== \n==11853== Conditional jump or move depends on uninitialised value(s)\n==11853==    at 0x4007BF: _main (bs_test_4109.c:49)\n==11853==    by 0x4008A3: main (bs_test_4109.c:92)\n==11853== \n==11853== Conditional jump or move depends on uninitialised value(s)\n==11853==    at 0x4007C6: _main (bs_test_4109.c:49)\n==11853==    by 0x4008A3: main (bs_test_4109.c:92)\n==11853== \n==11853== \n==11853== HEAP SUMMARY:\n==11853==     in use at exit: 0 bytes in 0 blocks\n==11853==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==11853== \n==11853== All heap blocks were freed -- no leaks are possible\n==11853== \n==11853== For counts of detected and suppressed errors, rerun with: -v\n==11853== Use --track-origins=yes to see where uninitialised values come from\n==11853== ERROR SUMMARY: 6 errors from 2 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x4007BF: _main (bs_test_4109.c:49)\n    by 0x4008A3: main (bs_test_4109.c:92)\n",
+                        "file": "main.c",
+                        "line": 47
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4110": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite M i N: Pogresan unos!\nUnesite M i N: Unesite elemente matrice: Matrica je cirkularna",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4111": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite M i N: Unesite elemente matrice: Matrica je cirkularna",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==11889== Memcheck, a memory error detector\n==11889== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==11889== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==11889== Command: bs_test_4111\n==11889== Parent PID: 11888\n==11889== \n==11889== Conditional jump or move depends on uninitialised value(s)\n==11889==    at 0x4007BF: _main (bs_test_4111.c:49)\n==11889==    by 0x4008A3: main (bs_test_4111.c:92)\n==11889== \n==11889== Conditional jump or move depends on uninitialised value(s)\n==11889==    at 0x4007C6: _main (bs_test_4111.c:49)\n==11889==    by 0x4008A3: main (bs_test_4111.c:92)\n==11889== \n==11889== \n==11889== HEAP SUMMARY:\n==11889==     in use at exit: 0 bytes in 0 blocks\n==11889==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==11889== \n==11889== All heap blocks were freed -- no leaks are possible\n==11889== \n==11889== For counts of detected and suppressed errors, rerun with: -v\n==11889== Use --track-origins=yes to see where uninitialised values come from\n==11889== ERROR SUMMARY: 6 errors from 2 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x4007BF: _main (bs_test_4111.c:49)\n    by 0x4008A3: main (bs_test_4111.c:92)\n",
+                        "file": "main.c",
+                        "line": 47
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4112": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite M i N: Unesite elemente matrice: Matrica je cirkularna",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==11907== Memcheck, a memory error detector\n==11907== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==11907== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==11907== Command: bs_test_4112\n==11907== Parent PID: 11906\n==11907== \n==11907== Conditional jump or move depends on uninitialised value(s)\n==11907==    at 0x4007BF: _main (bs_test_4112.c:49)\n==11907==    by 0x4008A3: main (bs_test_4112.c:92)\n==11907== \n==11907== Conditional jump or move depends on uninitialised value(s)\n==11907==    at 0x4007C6: _main (bs_test_4112.c:49)\n==11907==    by 0x4008A3: main (bs_test_4112.c:92)\n==11907== \n==11907== \n==11907== HEAP SUMMARY:\n==11907==     in use at exit: 0 bytes in 0 blocks\n==11907==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==11907== \n==11907== All heap blocks were freed -- no leaks are possible\n==11907== \n==11907== For counts of detected and suppressed errors, rerun with: -v\n==11907== Use --track-origins=yes to see where uninitialised values come from\n==11907== ERROR SUMMARY: 6 errors from 2 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x4007BF: _main (bs_test_4112.c:49)\n    by 0x4008A3: main (bs_test_4112.c:92)\n",
+                        "file": "main.c",
+                        "line": 47
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4113": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite M i N: Unesite elemente matrice: Matrica je cirkularna",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4115": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite M i N: Pogresan unos!\nUnesite M i N: Pogresan unos!\nUnesite M i N: Unesite elemente matrice: Matrica je cirkularna",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==11943== Memcheck, a memory error detector\n==11943== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==11943== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==11943== Command: bs_test_4115\n==11943== Parent PID: 11942\n==11943== \n==11943== Conditional jump or move depends on uninitialised value(s)\n==11943==    at 0x4007BF: _main (bs_test_4115.c:49)\n==11943==    by 0x4008A3: main (bs_test_4115.c:92)\n==11943== \n==11943== Conditional jump or move depends on uninitialised value(s)\n==11943==    at 0x4007C6: _main (bs_test_4115.c:49)\n==11943==    by 0x4008A3: main (bs_test_4115.c:92)\n==11943== \n==11943== \n==11943== HEAP SUMMARY:\n==11943==     in use at exit: 0 bytes in 0 blocks\n==11943==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==11943== \n==11943== All heap blocks were freed -- no leaks are possible\n==11943== \n==11943== For counts of detected and suppressed errors, rerun with: -v\n==11943== Use --track-origins=yes to see where uninitialised values come from\n==11943== ERROR SUMMARY: 6 errors from 2 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x4007BF: _main (bs_test_4115.c:49)\n    by 0x4008A3: main (bs_test_4115.c:92)\n",
+                        "file": "main.c",
+                        "line": 47
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4116": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite M i N: Unesite elemente matrice: Matrica je cirkularna",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==11961== Memcheck, a memory error detector\n==11961== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==11961== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==11961== Command: bs_test_4116\n==11961== Parent PID: 11960\n==11961== \n==11961== Conditional jump or move depends on uninitialised value(s)\n==11961==    at 0x4007BF: _main (bs_test_4116.c:49)\n==11961==    by 0x4008A3: main (bs_test_4116.c:92)\n==11961== \n==11961== Conditional jump or move depends on uninitialised value(s)\n==11961==    at 0x4007C6: _main (bs_test_4116.c:49)\n==11961==    by 0x4008A3: main (bs_test_4116.c:92)\n==11961== \n==11961== \n==11961== HEAP SUMMARY:\n==11961==     in use at exit: 0 bytes in 0 blocks\n==11961==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==11961== \n==11961== All heap blocks were freed -- no leaks are possible\n==11961== \n==11961== For counts of detected and suppressed errors, rerun with: -v\n==11961== Use --track-origins=yes to see where uninitialised values come from\n==11961== ERROR SUMMARY: 6 errors from 2 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x4007BF: _main (bs_test_4116.c:49)\n    by 0x4008A3: main (bs_test_4116.c:92)\n",
+                        "file": "main.c",
+                        "line": 47
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4120": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite M i N: Unesite elemente matrice: Matrica je cirkularna",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==11979== Memcheck, a memory error detector\n==11979== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==11979== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==11979== Command: bs_test_4120\n==11979== Parent PID: 11978\n==11979== \n==11979== Conditional jump or move depends on uninitialised value(s)\n==11979==    at 0x4007BF: _main (bs_test_4120.c:49)\n==11979==    by 0x4008A3: main (bs_test_4120.c:92)\n==11979== \n==11979== Conditional jump or move depends on uninitialised value(s)\n==11979==    at 0x4007C6: _main (bs_test_4120.c:49)\n==11979==    by 0x4008A3: main (bs_test_4120.c:92)\n==11979== \n==11979== \n==11979== HEAP SUMMARY:\n==11979==     in use at exit: 0 bytes in 0 blocks\n==11979==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==11979== \n==11979== All heap blocks were freed -- no leaks are possible\n==11979== \n==11979== For counts of detected and suppressed errors, rerun with: -v\n==11979== Use --track-origins=yes to see where uninitialised values come from\n==11979== ERROR SUMMARY: 8 errors from 2 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x4007BF: _main (bs_test_4120.c:49)\n    by 0x4008A3: main (bs_test_4120.c:92)\n",
+                        "file": "main.c",
+                        "line": 47
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4121": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite M i N: Unesite elemente matrice: Matrica je cirkularna",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==11997== Memcheck, a memory error detector\n==11997== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==11997== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==11997== Command: bs_test_4121\n==11997== Parent PID: 11996\n==11997== \n==11997== Conditional jump or move depends on uninitialised value(s)\n==11997==    at 0x4007BF: _main (bs_test_4121.c:49)\n==11997==    by 0x4008A3: main (bs_test_4121.c:92)\n==11997== \n==11997== Conditional jump or move depends on uninitialised value(s)\n==11997==    at 0x4007C6: _main (bs_test_4121.c:49)\n==11997==    by 0x4008A3: main (bs_test_4121.c:92)\n==11997== \n==11997== \n==11997== HEAP SUMMARY:\n==11997==     in use at exit: 0 bytes in 0 blocks\n==11997==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==11997== \n==11997== All heap blocks were freed -- no leaks are possible\n==11997== \n==11997== For counts of detected and suppressed errors, rerun with: -v\n==11997== Use --track-origins=yes to see where uninitialised values come from\n==11997== ERROR SUMMARY: 6 errors from 2 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x4007BF: _main (bs_test_4121.c:49)\n    by 0x4008A3: main (bs_test_4121.c:92)\n",
+                        "file": "main.c",
+                        "line": 47
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4122": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite M i N: Unesite elemente matrice: Matrica je cirkularna",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==12015== Memcheck, a memory error detector\n==12015== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==12015== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==12015== Command: bs_test_4122\n==12015== Parent PID: 12014\n==12015== \n==12015== Conditional jump or move depends on uninitialised value(s)\n==12015==    at 0x4007BF: _main (bs_test_4122.c:49)\n==12015==    by 0x4008A3: main (bs_test_4122.c:92)\n==12015== \n==12015== Conditional jump or move depends on uninitialised value(s)\n==12015==    at 0x4007C6: _main (bs_test_4122.c:49)\n==12015==    by 0x4008A3: main (bs_test_4122.c:92)\n==12015== \n==12015== \n==12015== HEAP SUMMARY:\n==12015==     in use at exit: 0 bytes in 0 blocks\n==12015==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==12015== \n==12015== All heap blocks were freed -- no leaks are possible\n==12015== \n==12015== For counts of detected and suppressed errors, rerun with: -v\n==12015== Use --track-origins=yes to see where uninitialised values come from\n==12015== ERROR SUMMARY: 14 errors from 2 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x4007BF: _main (bs_test_4122.c:49)\n    by 0x4008A3: main (bs_test_4122.c:92)\n",
+                        "file": "main.c",
+                        "line": 47
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4127": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite M i N: Unesite elemente matrice: Matrica je cirkularna",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==12033== Memcheck, a memory error detector\n==12033== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==12033== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==12033== Command: bs_test_4127\n==12033== Parent PID: 12032\n==12033== \n==12033== Conditional jump or move depends on uninitialised value(s)\n==12033==    at 0x4007BF: _main (bs_test_4127.c:49)\n==12033==    by 0x4008A3: main (bs_test_4127.c:92)\n==12033== \n==12033== Conditional jump or move depends on uninitialised value(s)\n==12033==    at 0x4007C6: _main (bs_test_4127.c:49)\n==12033==    by 0x4008A3: main (bs_test_4127.c:92)\n==12033== \n==12033== \n==12033== HEAP SUMMARY:\n==12033==     in use at exit: 0 bytes in 0 blocks\n==12033==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==12033== \n==12033== All heap blocks were freed -- no leaks are possible\n==12033== \n==12033== For counts of detected and suppressed errors, rerun with: -v\n==12033== Use --track-origins=yes to see where uninitialised values come from\n==12033== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x4007BF: _main (bs_test_4127.c:49)\n    by 0x4008A3: main (bs_test_4127.c:92)\n",
+                        "file": "main.c",
+                        "line": 47
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4128": {
+            "status": 7,
+            "run_result": {
+                "output": "Unesite M i N: Unesite elemente matrice: Matrica je cirkularna",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==12051== Memcheck, a memory error detector\n==12051== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==12051== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==12051== Command: bs_test_4128\n==12051== Parent PID: 12050\n==12051== \n==12051== Conditional jump or move depends on uninitialised value(s)\n==12051==    at 0x4007BF: _main (bs_test_4128.c:49)\n==12051==    by 0x4008A3: main (bs_test_4128.c:92)\n==12051== \n==12051== Conditional jump or move depends on uninitialised value(s)\n==12051==    at 0x4007C6: _main (bs_test_4128.c:49)\n==12051==    by 0x4008A3: main (bs_test_4128.c:92)\n==12051== \n==12051== \n==12051== HEAP SUMMARY:\n==12051==     in use at exit: 0 bytes in 0 blocks\n==12051==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==12051== \n==12051== All heap blocks were freed -- no leaks are possible\n==12051== \n==12051== For counts of detected and suppressed errors, rerun with: -v\n==12051== Use --track-origins=yes to see where uninitialised values come from\n==12051== ERROR SUMMARY: 6 errors from 2 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x4007BF: _main (bs_test_4128.c:49)\n    by 0x4008A3: main (bs_test_4128.c:92)\n",
+                        "file": "main.c",
+                        "line": 47
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4214": {
+            "status": 7,
+            "run_result": {
+                "output": "Unesite M i N: Unesite elemente matrice: Matrica je Teplicova",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==12070== Memcheck, a memory error detector\n==12070== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==12070== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==12070== Command: bs_test_4214\n==12070== Parent PID: 12069\n==12070== \n==12070== Conditional jump or move depends on uninitialised value(s)\n==12070==    at 0x4007BF: _main (bs_test_4214.c:49)\n==12070==    by 0x4008A3: main (bs_test_4214.c:92)\n==12070== \n==12070== Conditional jump or move depends on uninitialised value(s)\n==12070==    at 0x4007C6: _main (bs_test_4214.c:49)\n==12070==    by 0x4008A3: main (bs_test_4214.c:92)\n==12070== \n==12070== \n==12070== HEAP SUMMARY:\n==12070==     in use at exit: 0 bytes in 0 blocks\n==12070==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==12070== \n==12070== All heap blocks were freed -- no leaks are possible\n==12070== \n==12070== For counts of detected and suppressed errors, rerun with: -v\n==12070== Use --track-origins=yes to see where uninitialised values come from\n==12070== ERROR SUMMARY: 198 errors from 2 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x4007BF: _main (bs_test_4214.c:49)\n    by 0x4008A3: main (bs_test_4214.c:92)\n",
+                        "file": "main.c",
+                        "line": 47
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4215": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite M i N: Unesite elemente matrice: Matrica je cirkularna",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4216": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite M i N: Unesite elemente matrice: Matrica je cirkularna",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==12106== Memcheck, a memory error detector\n==12106== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==12106== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==12106== Command: bs_test_4216\n==12106== Parent PID: 12105\n==12106== \n==12106== Conditional jump or move depends on uninitialised value(s)\n==12106==    at 0x4007BF: _main (bs_test_4216.c:49)\n==12106==    by 0x4008A3: main (bs_test_4216.c:92)\n==12106== \n==12106== Conditional jump or move depends on uninitialised value(s)\n==12106==    at 0x4007C6: _main (bs_test_4216.c:49)\n==12106==    by 0x4008A3: main (bs_test_4216.c:92)\n==12106== \n==12106== \n==12106== HEAP SUMMARY:\n==12106==     in use at exit: 0 bytes in 0 blocks\n==12106==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==12106== \n==12106== All heap blocks were freed -- no leaks are possible\n==12106== \n==12106== For counts of detected and suppressed errors, rerun with: -v\n==12106== Use --track-origins=yes to see where uninitialised values come from\n==12106== ERROR SUMMARY: 10 errors from 2 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x4007BF: _main (bs_test_4216.c:49)\n    by 0x4008A3: main (bs_test_4216.c:92)\n",
+                        "file": "main.c",
+                        "line": 47
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1599733318
+}

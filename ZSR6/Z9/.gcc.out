@@ -1,0 +1,10 @@
+/rhome/m/mhadzic9/workspace/OR/ZSR6/Z9/main.c: In function ‘main’:
+/rhome/m/mhadzic9/workspace/OR/ZSR6/Z9/main.c:24:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+             if (nizA[k]==nizA[i] && i!=k) {
+                        ^~
+/rhome/m/mhadzic9/workspace/OR/ZSR6/Z9/main.c:37:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+             if (nizB[l]==nizB[i] && i!=l) {
+                        ^~
+/rhome/m/mhadzic9/workspace/OR/ZSR6/Z9/main.c:49:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+             if (nizA[i]==nizB[j]) {
+                        ^~

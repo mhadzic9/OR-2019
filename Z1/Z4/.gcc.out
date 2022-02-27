@@ -1,0 +1,4 @@
+/rhome/m/mhadzic9/workspace/OR/Z1/Z4/main.c: In function ‘main’:
+/rhome/m/mhadzic9/workspace/OR/Z1/Z4/main.c:6:42: warning: variable ‘z’ set but not used [-Wunused-but-set-variable]
+  double BMI,RFMm,RFMz,visina,obim,masa,a,z;
+                                          ^

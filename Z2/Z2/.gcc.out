@@ -1,0 +1,43 @@
+/rhome/m/mhadzic9/workspace/OR/Z2/Z2/main.c: In function ‘main’:
+/rhome/m/mhadzic9/workspace/OR/Z2/Z2/main.c:1383:38: warning: variable ‘kolicnik’ set but not used [-Wunused-but-set-variable]
+  int n,a,b,i,j,zbir,razlika,proizvod,kolicnik;
+                                      ^~~~~~~~
+/rhome/m/mhadzic9/workspace/OR/Z2/Z2/main.c:1383:29: warning: variable ‘proizvod’ set but not used [-Wunused-but-set-variable]
+  int n,a,b,i,j,zbir,razlika,proizvod,kolicnik;
+                             ^~~~~~~~
+/rhome/m/mhadzic9/workspace/OR/Z2/Z2/main.c:1383:21: warning: variable ‘razlika’ set but not used [-Wunused-but-set-variable]
+  int n,a,b,i,j,zbir,razlika,proizvod,kolicnik;
+                     ^~~~~~~
+/rhome/m/mhadzic9/workspace/OR/Z2/Z2/main.c:1383:16: warning: variable ‘zbir’ set but not used [-Wunused-but-set-variable]
+  int n,a,b,i,j,zbir,razlika,proizvod,kolicnik;
+                ^~~~
+/rhome/m/mhadzic9/workspace/OR/Z2/Z2/main.c:1382:142: warning: variable ‘mat9’ set but not used [-Wunused-but-set-variable]
+  char mat0[SEG][SEG],mat1[SEG][SEG],mat2[SEG][SEG],mat3[SEG][SEG],mat4[SEG][SEG],mat5[SEG][SEG],mat6[SEG][SEG],mat7[SEG][SEG],mat8[SEG][SEG],mat9[SEG][SEG];
+                                                                                                                                              ^~~~
+/rhome/m/mhadzic9/workspace/OR/Z2/Z2/main.c:1382:127: warning: variable ‘mat8’ set but not used [-Wunused-but-set-variable]
+  char mat0[SEG][SEG],mat1[SEG][SEG],mat2[SEG][SEG],mat3[SEG][SEG],mat4[SEG][SEG],mat5[SEG][SEG],mat6[SEG][SEG],mat7[SEG][SEG],mat8[SEG][SEG],mat9[SEG][SEG];
+                                                                                                                               ^~~~
+/rhome/m/mhadzic9/workspace/OR/Z2/Z2/main.c:1382:112: warning: variable ‘mat7’ set but not used [-Wunused-but-set-variable]
+  char mat0[SEG][SEG],mat1[SEG][SEG],mat2[SEG][SEG],mat3[SEG][SEG],mat4[SEG][SEG],mat5[SEG][SEG],mat6[SEG][SEG],mat7[SEG][SEG],mat8[SEG][SEG],mat9[SEG][SEG];
+                                                                                                                ^~~~
+/rhome/m/mhadzic9/workspace/OR/Z2/Z2/main.c:1382:97: warning: variable ‘mat6’ set but not used [-Wunused-but-set-variable]
+  char mat0[SEG][SEG],mat1[SEG][SEG],mat2[SEG][SEG],mat3[SEG][SEG],mat4[SEG][SEG],mat5[SEG][SEG],mat6[SEG][SEG],mat7[SEG][SEG],mat8[SEG][SEG],mat9[SEG][SEG];
+                                                                                                 ^~~~
+/rhome/m/mhadzic9/workspace/OR/Z2/Z2/main.c:1382:82: warning: variable ‘mat5’ set but not used [-Wunused-but-set-variable]
+  char mat0[SEG][SEG],mat1[SEG][SEG],mat2[SEG][SEG],mat3[SEG][SEG],mat4[SEG][SEG],mat5[SEG][SEG],mat6[SEG][SEG],mat7[SEG][SEG],mat8[SEG][SEG],mat9[SEG][SEG];
+                                                                                  ^~~~
+/rhome/m/mhadzic9/workspace/OR/Z2/Z2/main.c:1382:67: warning: variable ‘mat4’ set but not used [-Wunused-but-set-variable]
+  char mat0[SEG][SEG],mat1[SEG][SEG],mat2[SEG][SEG],mat3[SEG][SEG],mat4[SEG][SEG],mat5[SEG][SEG],mat6[SEG][SEG],mat7[SEG][SEG],mat8[SEG][SEG],mat9[SEG][SEG];
+                                                                   ^~~~
+/rhome/m/mhadzic9/workspace/OR/Z2/Z2/main.c:1382:52: warning: variable ‘mat3’ set but not used [-Wunused-but-set-variable]
+  char mat0[SEG][SEG],mat1[SEG][SEG],mat2[SEG][SEG],mat3[SEG][SEG],mat4[SEG][SEG],mat5[SEG][SEG],mat6[SEG][SEG],mat7[SEG][SEG],mat8[SEG][SEG],mat9[SEG][SEG];
+                                                    ^~~~
+/rhome/m/mhadzic9/workspace/OR/Z2/Z2/main.c:1382:37: warning: variable ‘mat2’ set but not used [-Wunused-but-set-variable]
+  char mat0[SEG][SEG],mat1[SEG][SEG],mat2[SEG][SEG],mat3[SEG][SEG],mat4[SEG][SEG],mat5[SEG][SEG],mat6[SEG][SEG],mat7[SEG][SEG],mat8[SEG][SEG],mat9[SEG][SEG];
+                                     ^~~~
+/rhome/m/mhadzic9/workspace/OR/Z2/Z2/main.c:1382:22: warning: variable ‘mat1’ set but not used [-Wunused-but-set-variable]
+  char mat0[SEG][SEG],mat1[SEG][SEG],mat2[SEG][SEG],mat3[SEG][SEG],mat4[SEG][SEG],mat5[SEG][SEG],mat6[SEG][SEG],mat7[SEG][SEG],mat8[SEG][SEG],mat9[SEG][SEG];
+                      ^~~~
+/rhome/m/mhadzic9/workspace/OR/Z2/Z2/main.c:1382:7: warning: variable ‘mat0’ set but not used [-Wunused-but-set-variable]
+  char mat0[SEG][SEG],mat1[SEG][SEG],mat2[SEG][SEG],mat3[SEG][SEG],mat4[SEG][SEG],mat5[SEG][SEG],mat6[SEG][SEG],mat7[SEG][SEG],mat8[SEG][SEG],mat9[SEG][SEG];
+       ^~~~

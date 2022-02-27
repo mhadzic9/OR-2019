@@ -1,0 +1,185 @@
+{
+    "id": 5776,
+    "name": "Osnove ra\u010dunarstva (2019\/2020), Ispit 4, Zadatak 3",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT1: Samo logini prvog tipa, nema izbacivanja *\/\nstruct Student studenti[] = { \n\t{0, \"Ahmed\", \"Babic\", \"12345\"},\n\t{0, \"Sara\", \"Mehic\", \"54321\"},\n\t{0, \"Pero\", \"Jukic\", \"23232\"}\n};\nstruct Login logini[] = {\n\t{984, \"sm54321\"},\n\t{111, \"pj23232\"},\n\t{235, \"ab12345\"}\n};\nint velS = nadji_logine(studenti, 3, logini, 3);\nint i;\nfor (i=0; i<velS; i++) {\n\tprintf(\"%d '%s' '%s' '%s'\\n\", studenti[i].id, studenti[i].ime, studenti[i].prezime, studenti[i].brindexa);\n}\nfor (i=0; i<3; i++) {\n\tprintf(\"%d '%s'\\n\", logini[i].id, logini[i].username);\n}\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "235 'Ahmed' 'Babic' '12345'                                      \\n984 'Sara' 'Mehic' '54321'\\n111 'Pero' 'Jukic' '23232'\\n984 'sm54321'\\n111 'pj23232'\\n235 'ab12345'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT2: Samo logini prvog tipa, Pero se izbacuje *\/\nstruct Student studenti[] = { \n\t{0, \"Ahmed\", \"Babic\", \"12345\"},\n\t{0, \"Sara\", \"Mehic\", \"54321\"},\n\t{0, \"Pero\", \"Jukic\", \"23232\"}\n};\nstruct Login logini[] = {\n\t{984, \"sm54321\"},\n\t{235, \"ab12345\"}\n};\nint velS = nadji_logine(studenti, 3, logini, 2);\nint i;\nfor (i=0; i<velS; i++) {\n\tprintf(\"%d '%s' '%s' '%s'\\n\", studenti[i].id, studenti[i].ime, studenti[i].prezime, studenti[i].brindexa);\n}\nfor (i=0; i<2; i++) {\n\tprintf(\"%d '%s'\\n\", logini[i].id, logini[i].username);\n}\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "235 'Ahmed' 'Babic' '12345'                                      \\n984 'Sara' 'Mehic' '54321'\\n984 'sm54321'\\n235 'ab12345'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT3: Logini oba tipa, nema izbacivanja *\/\nstruct Student studenti[] = { \n    {0, \"Ahmed\", \"Babic\", \"12345\"},\n    {0, \"Sara\", \"Mehic\", \"54321\"},\n    {0, \"Pero\", \"Jukic\", \"23232\"}\n};\nstruct Login logini[] = {\n    {423, \"smehic1\"},\n    {468, \"pj23232\"},\n    {235, \"ab12345\"}\n};\nint velS = nadji_logine(studenti, 3, logini, 3);\nint i;\nfor (i=0; i<velS; i++) {\n    printf(\"%d '%s' '%s' '%s'\\n\", studenti[i].id, studenti[i].ime, studenti[i].prezime, studenti[i].brindexa);\n}\nfor (i=0; i<3; i++) {\n    printf(\"%d '%s'\\n\", logini[i].id, logini[i].username);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "235 'Ahmed' 'Babic' '12345'\\n423 'Sara' 'Mehic' '54321'\\n468 'Pero' 'Jukic' '23232'\\n423 'smehic1'\\n468 'pj23232'\\n235 'ab12345'\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT4: Logini oba tipa, izbacuje se Pero *\/\nstruct Student studenti[] = { \n    {0, \"Ahmed\", \"Babic\", \"12345\"},\n    {0, \"Sara\", \"Mehic\", \"54321\"},\n    {0, \"Pero\", \"Jukic\", \"23232\"}\n};\nstruct Login logini[] = {\n    {984, \"smehic1\"},\n    {235, \"ab12345\"}\n};\nint velS = nadji_logine(studenti, 3, logini, 2);\nint i;\nfor (i=0; i<velS; i++) {\n    printf(\"%d '%s' '%s' '%s'\\n\", studenti[i].id, studenti[i].ime, studenti[i].prezime, studenti[i].brindexa);\n}\nfor (i=0; i<2; i++) {\n    printf(\"%d '%s'\\n\", logini[i].id, logini[i].username);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "235 'Ahmed' 'Babic' '12345'\\n984 'Sara' 'Mehic' '54321'\\n984 'smehic1'\\n235 'ab12345'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT5: Amela ima login prvog tipa, ostali Babici drugog tipa osim Alise za koju nema dovoljno brojeva pa se izbacuje *\/\nstruct Student studenti[] = { \n\t{0, \"Ahmed\", \"Babic\", \"12345\"},\n\t{0, \"Sara\", \"Mehic\", \"54321\"},\n\t{0, \"Pero\", \"Jukic\", \"23232\"},\n\t{0, \"Amela\", \"Babic\", \"12121\"},\n\t{0, \"Alija\", \"Babic\", \"21212\"},\n\t{0, \"Aleksandar\", \"Babic\", \"44444\"},\n\t{0, \"Alisa\", \"Babic\", \"32232\"}\n};\nstruct Login logini[] = {\n\t{984, \"smehic1\"},\n\t{312, \"ababic3\"},\n\t{1131, \"ababic1\"},\n\t{98, \"ab12121\"},\n\t{442, \"ababic2\"}\n};\nint velS = nadji_logine(studenti, 7, logini, 5);\nint i;\nfor (i=0; i<velS; i++) {\n\tprintf(\"%d '%s' '%s' '%s'\\n\", studenti[i].id, studenti[i].ime, studenti[i].prezime, studenti[i].brindexa);\n}\nfor (i=0; i<5; i++) {\n\tprintf(\"%d '%s'\\n\", logini[i].id, logini[i].username);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1131 'Ahmed' 'Babic' '12345'\\n984 'Sara' 'Mehic' '54321'\\n98 'Amela' 'Babic' '12121'\\n442 'Alija' 'Babic' '21212'\\n312 'Aleksandar' 'Babic' '44444'\\n984 'smehic1'\\n312 'ababic3'\\n1131 'ababic1'\\n98 'ab12121'\\n442 'ababic2'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT6: Ahmed Babic se izbacuje jer nema logina ababic1 (postoji ababic2 ali mora se krenuti od 1) *\/\nstruct Student studenti[] = { \n    {0, \"Ahmed\", \"Babic\", \"12345\"},\n    {0, \"Sara\", \"Mehic\", \"54321\"},\n    {0, \"Senad\", \"Mehic\", \"23232\"},\n    {0, \"Jozo\", \"Jozic\", \"12121\"}\n};\nstruct Login logini[] = {\n    {984, \"jj12121\"},\n    {312, \"smehic2\"},\n    {1131, \"smehic1\"},\n    {442, \"ababic2\"}\n};\nint velS = nadji_logine(studenti, 4, logini, 4);\nint i;\nfor (i=0; i<velS; i++) {\n    printf(\"%d '%s' '%s' '%s'\\n\", studenti[i].id, studenti[i].ime, studenti[i].prezime, studenti[i].brindexa);\n}\nfor (i=0; i<4; i++) {\n    printf(\"%d '%s'\\n\", logini[i].id, logini[i].username);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1131 'Sara' 'Mehic' '54321'\\n312 'Senad' 'Mehic' '23232'\\n984 'Jozo' 'Jozic' '12121'\\n984 'jj12121'\\n312 'smehic2'\\n1131 'smehic1'\\n442 'ababic2'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT7: Skracivanje dugackih prezimena. Duzina prezimena uvijek mora biti najvise 10.\nZato kada prodjemo ahadzimeh9 sljedeci login je ahadzime10. Anes i Azer su izbaceni jer\nje preskocen ahadzime12 i odmah se preslo na ahadzime13, a Jozo nema logina. *\/\n\nstruct Student studenti[] = { \n    {0, \"Ajla\", \"Hadzimehmedagic\", \"12345\"},\n    {0, \"Sara\", \"Mehic\", \"54321\"},\n    {0, \"Almir\", \"Hadzimehmedagic\", \"23232\"},\n    {0, \"Amila\", \"Hadzimehmedagic\", \"23232\"},\n    {0, \"Asim\", \"Hadzimehmedagic\", \"23232\"},\n    {0, \"Alija\", \"Hadzimehmedagic\", \"23232\"},\n    {0, \"Almina\", \"Hadzimehmedagic\", \"23232\"},\n    {0, \"Alisa\", \"Hadzimehmedagic\", \"23232\"},\n    {0, \"Jozo\", \"Jozic\", \"12121\"},\n    {0, \"Ajsa\", \"Hadzimehmedagic\", \"23232\"},\n    {0, \"Anida\", \"Hadzimehmedagic\", \"23232\"},\n    {0, \"Alem\", \"Hadzimehmedagic\", \"23232\"},\n    {0, \"Azra\", \"Hadzimehmedagic\", \"23232\"},\n    {0, \"Anes\", \"Hadzimehmedagic\", \"23232\"},\n    {0, \"Azer\", \"Hadzimehmedagic\", \"23232\"}\n};\nstruct Login logini[] = {\n    {984, \"ahadzimeh1\"},\n    {312, \"ahadzimeh2\"},\n    {1131, \"smehic1\"},\n    {442, \"ahadzimeh3\"},\n    {982, \"ahadzimeh4\"},\n    {21, \"ahadzimeh5\"},\n    {441, \"ahadzimeh6\"},\n    {123, \"ahadzimeh7\"},\n    {421, \"ahadzimeh8\"},\n    {723, \"ahadzimeh9\"},\n    {1, \"ahadzime10\"},\n    {98, \"ahadzime11\"}, \/* preskacem 12 *\/\n    {1911, \"ahadzime13\"},\n    \n};\nint velS = nadji_logine(studenti, 15, logini, 13);\nint i;\nfor (i=0; i<velS; i++) {\n    printf(\"%d '%s' '%s' '%s'\\n\", studenti[i].id, studenti[i].ime, studenti[i].prezime, studenti[i].brindexa);\n}\nfor (i=0; i<13; i++) {\n    printf(\"%d '%s'\\n\", logini[i].id, logini[i].username);\n}\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "984 'Ajla' 'Hadzimehmedagic' '12345'\\n1131 'Sara' 'Mehic' '54321'\\n312 'Almir' 'Hadzimehmedagic' '23232'\\n442 'Amila' 'Hadzimehmedagic' '23232'\\n982 'Asim' 'Hadzimehmedagic' '23232'\\n21 'Alija' 'Hadzimehmedagic' '23232'\\n441 'Almina' 'Hadzimehmedagic' '23232'\\n123 'Alisa' 'Hadzimehmedagic' '23232'\\n421 'Ajsa' 'Hadzimehmedagic' '23232'\\n723 'Anida' 'Hadzimehmedagic' '23232'\\n1 'Alem' 'Hadzimehmedagic' '23232'\\n98 'Azra' 'Hadzimehmedagic' '23232'\\n984 'ahadzimeh1'\\n312 'ahadzimeh2'\\n1131 'smehic1'\\n442 'ahadzimeh3'\\n982 'ahadzimeh4'\\n21 'ahadzimeh5'\\n441 'ahadzimeh6'\\n123 'ahadzimeh7'\\n421 'ahadzimeh8'\\n723 'ahadzimeh9'\\n1 'ahadzime10'\\n98 'ahadzime11'\\n1911 'ahadzime13'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT8: Test velikih nizova, neinicijaliziran id *\/\nstruct Student studenti[100];\nint i;\nfor (i=0; i<100; i++) {\n\tstrcpy(studenti[i].ime, \"Student\");\n\tstrcpy(studenti[i].prezime, \"Studenkovic\");\n\tsnprintf(studenti[i].brindexa, 20, \"%d\", i+10000);\n}\nstruct Login logini[100];\nfor (i=0; i<100; i++) {\n\tlogini[i].id = i+1;\n\tif (i%2 == 0)\n\t\tsnprintf(logini[i].username, 20, \"ss%d\", i+10000);\n\telse if (i<18)\n\t\tsnprintf(logini[i].username, 20, \"sstudenko%d\", i\/2+1);\n\telse\n\t\tsnprintf(logini[i].username, 20, \"sstudenk%d\", i\/2+1);\n}\nint velS = nadji_logine(studenti, 100, logini, 100);\nfor (i=0; i<velS; i++) {\n    printf(\"%d '%s' '%s' '%s'\\n\", studenti[i].id, studenti[i].ime, studenti[i].prezime, studenti[i].brindexa);\n}\nfor (i=0; i<100; i++) {\n    printf(\"%d '%s'\\n\", logini[i].id, logini[i].username);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 'Student' 'Studenkovic' '10000'\\n2 'Student' 'Studenkovic' '10001'\\n3 'Student' 'Studenkovic' '10002'\\n4 'Student' 'Studenkovic' '10003'\\n5 'Student' 'Studenkovic' '10004'\\n6 'Student' 'Studenkovic' '10005'\\n7 'Student' 'Studenkovic' '10006'\\n8 'Student' 'Studenkovic' '10007'\\n9 'Student' 'Studenkovic' '10008'\\n10 'Student' 'Studenkovic' '10009'\\n11 'Student' 'Studenkovic' '10010'\\n12 'Student' 'Studenkovic' '10011'\\n13 'Student' 'Studenkovic' '10012'\\n14 'Student' 'Studenkovic' '10013'\\n15 'Student' 'Studenkovic' '10014'\\n16 'Student' 'Studenkovic' '10015'\\n17 'Student' 'Studenkovic' '10016'\\n18 'Student' 'Studenkovic' '10017'\\n19 'Student' 'Studenkovic' '10018'\\n20 'Student' 'Studenkovic' '10019'\\n21 'Student' 'Studenkovic' '10020'\\n22 'Student' 'Studenkovic' '10021'\\n23 'Student' 'Studenkovic' '10022'\\n24 'Student' 'Studenkovic' '10023'\\n25 'Student' 'Studenkovic' '10024'\\n26 'Student' 'Studenkovic' '10025'\\n27 'Student' 'Studenkovic' '10026'\\n28 'Student' 'Studenkovic' '10027'\\n29 'Student' 'Studenkovic' '10028'\\n30 'Student' 'Studenkovic' '10029'\\n31 'Student' 'Studenkovic' '10030'\\n32 'Student' 'Studenkovic' '10031'\\n33 'Student' 'Studenkovic' '10032'\\n34 'Student' 'Studenkovic' '10033'\\n35 'Student' 'Studenkovic' '10034'\\n36 'Student' 'Studenkovic' '10035'\\n37 'Student' 'Studenkovic' '10036'\\n38 'Student' 'Studenkovic' '10037'\\n39 'Student' 'Studenkovic' '10038'\\n40 'Student' 'Studenkovic' '10039'\\n41 'Student' 'Studenkovic' '10040'\\n42 'Student' 'Studenkovic' '10041'\\n43 'Student' 'Studenkovic' '10042'\\n44 'Student' 'Studenkovic' '10043'\\n45 'Student' 'Studenkovic' '10044'\\n46 'Student' 'Studenkovic' '10045'\\n47 'Student' 'Studenkovic' '10046'\\n48 'Student' 'Studenkovic' '10047'\\n49 'Student' 'Studenkovic' '10048'\\n50 'Student' 'Studenkovic' '10049'\\n51 'Student' 'Studenkovic' '10050'\\n52 'Student' 'Studenkovic' '10051'\\n53 'Student' 'Studenkovic' '10052'\\n54 'Student' 'Studenkovic' '10053'\\n55 'Student' 'Studenkovic' '10054'\\n56 'Student' 'Studenkovic' '10055'\\n57 'Student' 'Studenkovic' '10056'\\n58 'Student' 'Studenkovic' '10057'\\n59 'Student' 'Studenkovic' '10058'\\n60 'Student' 'Studenkovic' '10059'\\n61 'Student' 'Studenkovic' '10060'\\n62 'Student' 'Studenkovic' '10061'\\n63 'Student' 'Studenkovic' '10062'\\n64 'Student' 'Studenkovic' '10063'\\n65 'Student' 'Studenkovic' '10064'\\n66 'Student' 'Studenkovic' '10065'\\n67 'Student' 'Studenkovic' '10066'\\n68 'Student' 'Studenkovic' '10067'\\n69 'Student' 'Studenkovic' '10068'\\n70 'Student' 'Studenkovic' '10069'\\n71 'Student' 'Studenkovic' '10070'\\n72 'Student' 'Studenkovic' '10071'\\n73 'Student' 'Studenkovic' '10072'\\n74 'Student' 'Studenkovic' '10073'\\n75 'Student' 'Studenkovic' '10074'\\n76 'Student' 'Studenkovic' '10075'\\n77 'Student' 'Studenkovic' '10076'\\n78 'Student' 'Studenkovic' '10077'\\n79 'Student' 'Studenkovic' '10078'\\n80 'Student' 'Studenkovic' '10079'\\n81 'Student' 'Studenkovic' '10080'\\n82 'Student' 'Studenkovic' '10081'\\n83 'Student' 'Studenkovic' '10082'\\n84 'Student' 'Studenkovic' '10083'\\n85 'Student' 'Studenkovic' '10084'\\n86 'Student' 'Studenkovic' '10085'\\n87 'Student' 'Studenkovic' '10086'\\n88 'Student' 'Studenkovic' '10087'\\n89 'Student' 'Studenkovic' '10088'\\n90 'Student' 'Studenkovic' '10089'\\n91 'Student' 'Studenkovic' '10090'\\n92 'Student' 'Studenkovic' '10091'\\n93 'Student' 'Studenkovic' '10092'\\n94 'Student' 'Studenkovic' '10093'\\n95 'Student' 'Studenkovic' '10094'\\n96 'Student' 'Studenkovic' '10095'\\n97 'Student' 'Studenkovic' '10096'\\n98 'Student' 'Studenkovic' '10097'\\n99 'Student' 'Studenkovic' '10098'\\n100 'Student' 'Studenkovic' '10099'\\n1 'ss10000'\\n2 'sstudenko1'\\n3 'ss10002'\\n4 'sstudenko2'\\n5 'ss10004'\\n6 'sstudenko3'\\n7 'ss10006'\\n8 'sstudenko4'\\n9 'ss10008'\\n10 'sstudenko5'\\n11 'ss10010'\\n12 'sstudenko6'\\n13 'ss10012'\\n14 'sstudenko7'\\n15 'ss10014'\\n16 'sstudenko8'\\n17 'ss10016'\\n18 'sstudenko9'\\n19 'ss10018'\\n20 'sstudenk10'\\n21 'ss10020'\\n22 'sstudenk11'\\n23 'ss10022'\\n24 'sstudenk12'\\n25 'ss10024'\\n26 'sstudenk13'\\n27 'ss10026'\\n28 'sstudenk14'\\n29 'ss10028'\\n30 'sstudenk15'\\n31 'ss10030'\\n32 'sstudenk16'\\n33 'ss10032'\\n34 'sstudenk17'\\n35 'ss10034'\\n36 'sstudenk18'\\n37 'ss10036'\\n38 'sstudenk19'\\n39 'ss10038'\\n40 'sstudenk20'\\n41 'ss10040'\\n42 'sstudenk21'\\n43 'ss10042'\\n44 'sstudenk22'\\n45 'ss10044'\\n46 'sstudenk23'\\n47 'ss10046'\\n48 'sstudenk24'\\n49 'ss10048'\\n50 'sstudenk25'\\n51 'ss10050'\\n52 'sstudenk26'\\n53 'ss10052'\\n54 'sstudenk27'\\n55 'ss10054'\\n56 'sstudenk28'\\n57 'ss10056'\\n58 'sstudenk29'\\n59 'ss10058'\\n60 'sstudenk30'\\n61 'ss10060'\\n62 'sstudenk31'\\n63 'ss10062'\\n64 'sstudenk32'\\n65 'ss10064'\\n66 'sstudenk33'\\n67 'ss10066'\\n68 'sstudenk34'\\n69 'ss10068'\\n70 'sstudenk35'\\n71 'ss10070'\\n72 'sstudenk36'\\n73 'ss10072'\\n74 'sstudenk37'\\n75 'ss10074'\\n76 'sstudenk38'\\n77 'ss10076'\\n78 'sstudenk39'\\n79 'ss10078'\\n80 'sstudenk40'\\n81 'ss10080'\\n82 'sstudenk41'\\n83 'ss10082'\\n84 'sstudenk42'\\n85 'ss10084'\\n86 'sstudenk43'\\n87 'ss10086'\\n88 'sstudenk44'\\n89 'ss10088'\\n90 'sstudenk45'\\n91 'ss10090'\\n92 'sstudenk46'\\n93 'ss10092'\\n94 'sstudenk47'\\n95 'ss10094'\\n96 'sstudenk48'\\n97 'ss10096'\\n98 'sstudenk49'\\n99 'ss10098'\\n100 'sstudenk50'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "buildhost_description": {
+        "id": "lab002c28",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "5264": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 10 prirodnih brojeva: 000000000000102\n000000000007374\n000000000000000\n123            \n727            \n000000007349272\n73             \n111            \n000000000082824\n1              \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "5265": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 10 prirodnih brojeva: 000000000000000\n000000000000000\n000000000000000\n000000000000000\n000000000000000\n000000000000000\n000000000000000\n000000000000000\n000000000000000\n000000000000000\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "5266": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 10 prirodnih brojeva: 1              \n3              \n5              \n7              \n9              \n11             \n13             \n15             \n17             \n19             \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "5267": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 10 prirodnih brojeva: 000000000561156\n32115          \n186213         \n000000021345486\n1221315        \n1235453        \n000000002133556\n1231457        \n000000000115646\n321155         \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1571754444
+}
